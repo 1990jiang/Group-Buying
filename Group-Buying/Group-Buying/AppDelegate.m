@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "JJBaseTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -18,18 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    /*
-      pod 'SDWebImage', '~> 4.0.0-beta2'
-     
-     */
     //创建window
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    //创建view
-    ViewController *vc = [[ViewController alloc]init];
-    
-    //设置根控制器
-    self.window.rootViewController = vc;
+    //创建tabbar
+    JJBaseTabBarController *tabVc = [[JJBaseTabBarController alloc]init];
+   //设置根控制器
+    self.window.rootViewController = tabVc;
     
     //展示window
     [self.window makeKeyAndVisible];

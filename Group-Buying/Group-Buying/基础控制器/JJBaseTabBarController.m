@@ -1,26 +1,28 @@
 //
-//  ViewController.m
+//  JJBaseTabBarController.m
 //  Group-Buying
 //
 //  Created by 蒋俊 on 16/12/22.
 //  Copyright © 2016年 蒋俊. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "JJBaseTabBarController.h"
 
-@interface ViewController ()
+@interface JJBaseTabBarController ()
 
 @end
 
-@implementation ViewController
+@implementation JJBaseTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    self.view.backgroundColor = [UIColor whiteColor];
 
-     
+
 }
+
+
+
+
 
 
 @end

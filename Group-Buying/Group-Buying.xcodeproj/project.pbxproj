@@ -14,6 +14,7 @@
 		91016F991E0B73CE00C7E0D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91016F971E0B73CE00C7E0D8 /* Main.storyboard */; };
 		91016F9B1E0B73CE00C7E0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9A1E0B73CE00C7E0D8 /* Assets.xcassets */; };
 		91016F9E1E0B73CE00C7E0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9C1E0B73CE00C7E0D8 /* LaunchScreen.storyboard */; };
+		91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		91016F9A1E0B73CE00C7E0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91016F9D1E0B73CE00C7E0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91016F9F1E0B73CE00C7E0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91016FA81E0BCE5600C7E0D8 /* JJBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseTabBarController.h; sourceTree = "<group>"; };
+		91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTabBarController.m; sourceTree = "<group>"; };
 		913C37F3C45ACAA066C22FCA /* Pods-Group-Buying.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group-Buying.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Group-Buying/Pods-Group-Buying.debug.xcconfig"; sourceTree = "<group>"; };
 		BDFC610DC550E61D991C16CF /* Pods-Group-Buying.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group-Buying.release.xcconfig"; path = "Pods/Target Support Files/Pods-Group-Buying/Pods-Group-Buying.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +85,7 @@
 		91016F8D1E0B73CE00C7E0D8 /* Group-Buying */ = {
 			isa = PBXGroup;
 			children = (
+				91016FA71E0BCE2000C7E0D8 /* 基础控制器 */,
 				91016FA51E0B844200C7E0D8 /* 资源文件 */,
 				91016F911E0B73CE00C7E0D8 /* AppDelegate.h */,
 				91016F921E0B73CE00C7E0D8 /* AppDelegate.m */,
@@ -117,6 +121,15 @@
 				91016F9F1E0B73CE00C7E0D8 /* Info.plist */,
 			);
 			name = "系统资源";
+			sourceTree = "<group>";
+		};
+		91016FA71E0BCE2000C7E0D8 /* 基础控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				91016FA81E0BCE5600C7E0D8 /* JJBaseTabBarController.h */,
+				91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */,
+			);
+			path = "基础控制器";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +256,7 @@
 			files = (
 				91016F961E0B73CE00C7E0D8 /* ViewController.m in Sources */,
 				91016F931E0B73CE00C7E0D8 /* AppDelegate.m in Sources */,
+				91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */,
 				91016F901E0B73CE00C7E0D8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

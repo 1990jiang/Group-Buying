@@ -10,13 +10,16 @@
 		5735094C21A1D8DA5338926B /* libPods-Group-Buying.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B05D5CF84679D2529ACD832 /* libPods-Group-Buying.a */; };
 		91016F901E0B73CE00C7E0D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016F8F1E0B73CE00C7E0D8 /* main.m */; };
 		91016F931E0B73CE00C7E0D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016F921E0B73CE00C7E0D8 /* AppDelegate.m */; };
-		91016F961E0B73CE00C7E0D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016F951E0B73CE00C7E0D8 /* ViewController.m */; };
 		91016F991E0B73CE00C7E0D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91016F971E0B73CE00C7E0D8 /* Main.storyboard */; };
 		91016F9B1E0B73CE00C7E0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9A1E0B73CE00C7E0D8 /* Assets.xcassets */; };
 		91016F9E1E0B73CE00C7E0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9C1E0B73CE00C7E0D8 /* LaunchScreen.storyboard */; };
 		91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */; };
 		91FEC86F1E0CCAEF003B5AC1 /* JJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */; };
 		91FEC8711E0CCB7D003B5AC1 /* JJTabBarViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */; };
+		91FEC8871E0D0968003B5AC1 /* JJTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC8861E0D0968003B5AC1 /* JJTimeViewController.m */; };
+		91FEC88A1E0D0978003B5AC1 /* JJMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC8891E0D0978003B5AC1 /* JJMyViewController.m */; };
+		91FEC88D1E0D098F003B5AC1 /* JJBuyCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC88C1E0D098F003B5AC1 /* JJBuyCarViewController.m */; };
+		91FEC8901E0D099D003B5AC1 /* JJClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC88F1E0D099D003B5AC1 /* JJClassViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +28,6 @@
 		91016F8F1E0B73CE00C7E0D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91016F911E0B73CE00C7E0D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		91016F921E0B73CE00C7E0D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		91016F941E0B73CE00C7E0D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		91016F951E0B73CE00C7E0D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		91016F981E0B73CE00C7E0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91016F9A1E0B73CE00C7E0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91016F9D1E0B73CE00C7E0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +38,14 @@
 		91FEC86D1E0CCAEF003B5AC1 /* JJBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseNavigationController.h; sourceTree = "<group>"; };
 		91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseNavigationController.m; sourceTree = "<group>"; };
 		91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JJTabBarViewController.plist; sourceTree = "<group>"; };
+		91FEC8851E0D0968003B5AC1 /* JJTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTimeViewController.h; sourceTree = "<group>"; };
+		91FEC8861E0D0968003B5AC1 /* JJTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTimeViewController.m; sourceTree = "<group>"; };
+		91FEC8881E0D0978003B5AC1 /* JJMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMyViewController.h; sourceTree = "<group>"; };
+		91FEC8891E0D0978003B5AC1 /* JJMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMyViewController.m; sourceTree = "<group>"; };
+		91FEC88B1E0D098F003B5AC1 /* JJBuyCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBuyCarViewController.h; sourceTree = "<group>"; };
+		91FEC88C1E0D098F003B5AC1 /* JJBuyCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBuyCarViewController.m; sourceTree = "<group>"; };
+		91FEC88E1E0D099D003B5AC1 /* JJClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJClassViewController.h; sourceTree = "<group>"; };
+		91FEC88F1E0D099D003B5AC1 /* JJClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJClassViewController.m; sourceTree = "<group>"; };
 		BDFC610DC550E61D991C16CF /* Pods-Group-Buying.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group-Buying.release.xcconfig"; path = "Pods/Target Support Files/Pods-Group-Buying/Pods-Group-Buying.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,8 +107,6 @@
 				91016FA51E0B844200C7E0D8 /* 资源文件 */,
 				91016F911E0B73CE00C7E0D8 /* AppDelegate.h */,
 				91016F921E0B73CE00C7E0D8 /* AppDelegate.m */,
-				91016F941E0B73CE00C7E0D8 /* ViewController.h */,
-				91016F951E0B73CE00C7E0D8 /* ViewController.m */,
 				91016FA61E0B872D00C7E0D8 /* 系统资源 */,
 				91016F8E1E0B73CE00C7E0D8 /* Supporting Files */,
 			);
@@ -147,6 +154,7 @@
 		91FEC8721E0CCF02003B5AC1 /* 分类 */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC8911E0D0A9C003B5AC1 /* Tool */,
 				91FEC8731E0CCF02003B5AC1 /* Controller */,
 				91FEC8741E0CCF02003B5AC1 /* Model */,
 				91FEC8751E0CCF02003B5AC1 /* View */,
@@ -157,6 +165,8 @@
 		91FEC8731E0CCF02003B5AC1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC88E1E0D099D003B5AC1 /* JJClassViewController.h */,
+				91FEC88F1E0D099D003B5AC1 /* JJClassViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +188,7 @@
 		91FEC8761E0CCF11003B5AC1 /* 购物车 */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC8921E0D0AAC003B5AC1 /* Tool */,
 				91FEC8771E0CCF11003B5AC1 /* Controller */,
 				91FEC8781E0CCF11003B5AC1 /* Model */,
 				91FEC8791E0CCF11003B5AC1 /* View */,
@@ -188,6 +199,8 @@
 		91FEC8771E0CCF11003B5AC1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC88B1E0D098F003B5AC1 /* JJBuyCarViewController.h */,
+				91FEC88C1E0D098F003B5AC1 /* JJBuyCarViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +222,7 @@
 		91FEC87A1E0CCF1B003B5AC1 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC8931E0D0AB4003B5AC1 /* Tool */,
 				91FEC87B1E0CCF1B003B5AC1 /* Controller */,
 				91FEC87C1E0CCF1B003B5AC1 /* Model */,
 				91FEC87D1E0CCF1B003B5AC1 /* View */,
@@ -219,6 +233,8 @@
 		91FEC87B1E0CCF1B003B5AC1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC8881E0D0978003B5AC1 /* JJMyViewController.h */,
+				91FEC8891E0D0978003B5AC1 /* JJMyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +256,7 @@
 		91FEC87E1E0CCF26003B5AC1 /* 限时购 */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC8941E0D0AC2003B5AC1 /* Tool */,
 				91FEC87F1E0CCF26003B5AC1 /* Controller */,
 				91FEC8801E0CCF26003B5AC1 /* Model */,
 				91FEC8811E0CCF26003B5AC1 /* View */,
@@ -250,6 +267,8 @@
 		91FEC87F1E0CCF26003B5AC1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC8851E0D0968003B5AC1 /* JJTimeViewController.h */,
+				91FEC8861E0D0968003B5AC1 /* JJTimeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,6 +285,34 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		91FEC8911E0D0A9C003B5AC1 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		91FEC8921E0D0AAC003B5AC1 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		91FEC8931E0D0AB4003B5AC1 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		91FEC8941E0D0AC2003B5AC1 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,8 +439,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91016F961E0B73CE00C7E0D8 /* ViewController.m in Sources */,
 				91016F931E0B73CE00C7E0D8 /* AppDelegate.m in Sources */,
+				91FEC88D1E0D098F003B5AC1 /* JJBuyCarViewController.m in Sources */,
+				91FEC8871E0D0968003B5AC1 /* JJTimeViewController.m in Sources */,
+				91FEC8901E0D099D003B5AC1 /* JJClassViewController.m in Sources */,
+				91FEC88A1E0D0978003B5AC1 /* JJMyViewController.m in Sources */,
 				91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */,
 				91FEC86F1E0CCAEF003B5AC1 /* JJBaseNavigationController.m in Sources */,
 				91016F901E0B73CE00C7E0D8 /* main.m in Sources */,

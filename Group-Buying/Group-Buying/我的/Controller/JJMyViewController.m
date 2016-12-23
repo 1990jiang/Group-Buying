@@ -10,7 +10,7 @@
 
 #import <Masonry.h>
 
-@interface JJMyViewController ()
+@interface JJMyViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 /**headView*/
 @property (nonatomic , strong) UIView *headView;
@@ -21,6 +21,9 @@
 /**registerBtn*/
 @property (nonatomic , strong) UIButton *registerBtn;
 
+/**tableView*/
+@property (nonatomic , strong) UITableView *tableView;
+
 
 @end
 
@@ -30,7 +33,7 @@
 #pragma mark -- 视图生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
- self.view.backgroundColor = [UIColor whiteColor];
+ self.view.backgroundColor = [UIColor lightGrayColor];
 
     //设置这个属性是在有导航栏的情况下让布局从导航栏下面开始(不设置的话，会从导航栏顶部开始，我们在布局headView时就会出现问题)
    self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -39,7 +42,7 @@
     [self.headView addSubview:self.loginBackImage];
     [self.headView addSubview:self.loginBtn];
     [self.headView addSubview:self.registerBtn];
-    
+    [self.view addSubview:self.tableView];
     //调用方法
     [self setUpMasonyUI];
 }
@@ -86,6 +89,45 @@
     }
     return _registerBtn;
 }
+//展示tableView
+-(UITableView *)tableView
+{
+    if (!_tableView){
+       //这里可以先对tableView的frame设置为nil，因为要设置其自动布局约束
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        //让tableView不能滑动还有一种设置方法(前提是这个tableView的大小是固定的)
+        //_tableView.scrollEnabled = NO;
+        _tableView.bounces = NO;
+    }
+    return _tableView;
+}
+
+#pragma mark -- tableView代理和数据源
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return  4;
+}
+
+//返回每行cell的高度
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.textLabel.text = @"dhgjasdhgjsdh;";
+    return cell;
+    
+}
+
+//选择cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+}
+
 
 #pragma mark -- 辅助方法
 //控件布局代码
@@ -124,9 +166,12 @@
         make.size.mas_equalTo(CGSizeMake(60, 30));
     }];
     
-    
-    
-    
+    //tableView
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(weakSelf.view);
+        make.height.mas_equalTo(176);
+        make.top.equalTo(weakSelf.headView.mas_bottom).offset(35);
+    }];
 }
 
 @end

@@ -15,6 +15,8 @@
 		91016F9B1E0B73CE00C7E0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9A1E0B73CE00C7E0D8 /* Assets.xcassets */; };
 		91016F9E1E0B73CE00C7E0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9C1E0B73CE00C7E0D8 /* LaunchScreen.storyboard */; };
 		91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */; };
+		91FEC86F1E0CCAEF003B5AC1 /* JJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */; };
+		91FEC8711E0CCB7D003B5AC1 /* JJTabBarViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		91016FA81E0BCE5600C7E0D8 /* JJBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseTabBarController.h; sourceTree = "<group>"; };
 		91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTabBarController.m; sourceTree = "<group>"; };
 		913C37F3C45ACAA066C22FCA /* Pods-Group-Buying.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group-Buying.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Group-Buying/Pods-Group-Buying.debug.xcconfig"; sourceTree = "<group>"; };
+		91FEC86D1E0CCAEF003B5AC1 /* JJBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseNavigationController.h; sourceTree = "<group>"; };
+		91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseNavigationController.m; sourceTree = "<group>"; };
+		91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JJTabBarViewController.plist; sourceTree = "<group>"; };
 		BDFC610DC550E61D991C16CF /* Pods-Group-Buying.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group-Buying.release.xcconfig"; path = "Pods/Target Support Files/Pods-Group-Buying/Pods-Group-Buying.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +90,10 @@
 		91016F8D1E0B73CE00C7E0D8 /* Group-Buying */ = {
 			isa = PBXGroup;
 			children = (
+				91FEC87E1E0CCF26003B5AC1 /* 限时购 */,
+				91FEC87A1E0CCF1B003B5AC1 /* 我的 */,
+				91FEC8761E0CCF11003B5AC1 /* 购物车 */,
+				91FEC8721E0CCF02003B5AC1 /* 分类 */,
 				91016FA71E0BCE2000C7E0D8 /* 基础控制器 */,
 				91016FA51E0B844200C7E0D8 /* 资源文件 */,
 				91016F911E0B73CE00C7E0D8 /* AppDelegate.h */,
@@ -128,8 +137,135 @@
 			children = (
 				91016FA81E0BCE5600C7E0D8 /* JJBaseTabBarController.h */,
 				91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */,
+				91FEC86D1E0CCAEF003B5AC1 /* JJBaseNavigationController.h */,
+				91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */,
+				91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */,
 			);
 			path = "基础控制器";
+			sourceTree = "<group>";
+		};
+		91FEC8721E0CCF02003B5AC1 /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				91FEC8731E0CCF02003B5AC1 /* Controller */,
+				91FEC8741E0CCF02003B5AC1 /* Model */,
+				91FEC8751E0CCF02003B5AC1 /* View */,
+			);
+			path = "分类";
+			sourceTree = "<group>";
+		};
+		91FEC8731E0CCF02003B5AC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		91FEC8741E0CCF02003B5AC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91FEC8751E0CCF02003B5AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91FEC8761E0CCF11003B5AC1 /* 购物车 */ = {
+			isa = PBXGroup;
+			children = (
+				91FEC8771E0CCF11003B5AC1 /* Controller */,
+				91FEC8781E0CCF11003B5AC1 /* Model */,
+				91FEC8791E0CCF11003B5AC1 /* View */,
+			);
+			path = "购物车";
+			sourceTree = "<group>";
+		};
+		91FEC8771E0CCF11003B5AC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		91FEC8781E0CCF11003B5AC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91FEC8791E0CCF11003B5AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91FEC87A1E0CCF1B003B5AC1 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				91FEC87B1E0CCF1B003B5AC1 /* Controller */,
+				91FEC87C1E0CCF1B003B5AC1 /* Model */,
+				91FEC87D1E0CCF1B003B5AC1 /* View */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		91FEC87B1E0CCF1B003B5AC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		91FEC87C1E0CCF1B003B5AC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91FEC87D1E0CCF1B003B5AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91FEC87E1E0CCF26003B5AC1 /* 限时购 */ = {
+			isa = PBXGroup;
+			children = (
+				91FEC87F1E0CCF26003B5AC1 /* Controller */,
+				91FEC8801E0CCF26003B5AC1 /* Model */,
+				91FEC8811E0CCF26003B5AC1 /* View */,
+			);
+			path = "限时购";
+			sourceTree = "<group>";
+		};
+		91FEC87F1E0CCF26003B5AC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		91FEC8801E0CCF26003B5AC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91FEC8811E0CCF26003B5AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +297,7 @@
 		91016F831E0B73CD00C7E0D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JJ;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "蒋俊";
 				TargetAttributes = {
@@ -194,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91016F9E1E0B73CE00C7E0D8 /* LaunchScreen.storyboard in Resources */,
+				91FEC8711E0CCB7D003B5AC1 /* JJTabBarViewController.plist in Resources */,
 				91016F9B1E0B73CE00C7E0D8 /* Assets.xcassets in Resources */,
 				91016F991E0B73CE00C7E0D8 /* Main.storyboard in Resources */,
 			);
@@ -257,6 +395,7 @@
 				91016F961E0B73CE00C7E0D8 /* ViewController.m in Sources */,
 				91016F931E0B73CE00C7E0D8 /* AppDelegate.m in Sources */,
 				91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */,
+				91FEC86F1E0CCAEF003B5AC1 /* JJBaseNavigationController.m in Sources */,
 				91016F901E0B73CE00C7E0D8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

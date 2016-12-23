@@ -32,6 +32,8 @@
     [super viewDidLoad];
  self.view.backgroundColor = [UIColor whiteColor];
 
+    //设置这个属性是在有导航栏的情况下让布局从导航栏下面开始(不设置的话，会从导航栏顶部开始，我们在布局headView时就会出现问题)
+   self.edgesForExtendedLayout = UIRectEdgeNone;
     //添加子控件
     [self.view addSubview:self.headView];
     [self.headView addSubview:self.loginBackImage];
@@ -100,7 +102,7 @@
     //headView
     [_headView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(weakSelf.view);
-        make.top.equalTo(weakSelf.view).offset(60);
+        make.top.equalTo(weakSelf.view);
         make.height.mas_equalTo(125);
     }];
     //backImage

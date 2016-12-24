@@ -14,6 +14,7 @@
 		91016F9B1E0B73CE00C7E0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9A1E0B73CE00C7E0D8 /* Assets.xcassets */; };
 		91016F9E1E0B73CE00C7E0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9C1E0B73CE00C7E0D8 /* LaunchScreen.storyboard */; };
 		91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */; };
+		914847911E0E5C070076B09D /* JJMyMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914847901E0E5C070076B09D /* JJMyMessageCell.m */; };
 		91FEC86F1E0CCAEF003B5AC1 /* JJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */; };
 		91FEC8711E0CCB7D003B5AC1 /* JJTabBarViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */; };
 		91FEC8871E0D0968003B5AC1 /* JJTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC8861E0D0968003B5AC1 /* JJTimeViewController.m */; };
@@ -36,6 +37,8 @@
 		91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTabBarController.m; sourceTree = "<group>"; };
 		913C37F3C45ACAA066C22FCA /* Pods-Group-Buying.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group-Buying.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Group-Buying/Pods-Group-Buying.debug.xcconfig"; sourceTree = "<group>"; };
 		9148478E1E0E18850076B09D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9148478F1E0E5C070076B09D /* JJMyMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMyMessageCell.h; sourceTree = "<group>"; };
+		914847901E0E5C070076B09D /* JJMyMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMyMessageCell.m; sourceTree = "<group>"; };
 		91FEC86D1E0CCAEF003B5AC1 /* JJBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseNavigationController.h; sourceTree = "<group>"; };
 		91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseNavigationController.m; sourceTree = "<group>"; };
 		91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JJTabBarViewController.plist; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 		91FEC87D1E0CCF1B003B5AC1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9148478F1E0E5C070076B09D /* JJMyMessageCell.h */,
+				914847901E0E5C070076B09D /* JJMyMessageCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				91FEC88D1E0D098F003B5AC1 /* JJBuyCarViewController.m in Sources */,
 				91FEC8871E0D0968003B5AC1 /* JJTimeViewController.m in Sources */,
 				91FEC8901E0D099D003B5AC1 /* JJClassViewController.m in Sources */,
+				914847911E0E5C070076B09D /* JJMyMessageCell.m in Sources */,
 				91FEC88A1E0D0978003B5AC1 /* JJMyViewController.m in Sources */,
 				91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */,
 				91FEC86F1E0CCAEF003B5AC1 /* JJBaseNavigationController.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import "JJMyViewController.h"
 
-#import <Masonry.h>
+
 
 @interface JJMyViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -33,7 +33,7 @@
 #pragma mark -- 视图生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
- self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor colorWithRed:242.0/255.0 green:242.0/255.0 blue:242.0/255.0 alpha:1];
 
     //设置这个属性是在有导航栏的情况下让布局从导航栏下面开始(不设置的话，会从导航栏顶部开始，我们在布局headView时就会出现问题)
    self.edgesForExtendedLayout = UIRectEdgeNone;

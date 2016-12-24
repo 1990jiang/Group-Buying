@@ -144,7 +144,9 @@
     }
     //关键步骤，自己弄假数据就可以这样写
     cell.sourceDic = self.sourceArr[indexPath.row];
-   
+   // cell.sourceDic 实际上是调用了cell里面的字典属性的set方法，然后这边传一个字典给这个方法里面，从而给cell的字典属性 sourceDic赋值 [cell setSourceDic:sourceDic];
+    
+    
     //做判断
     if (indexPath.row == 3) {
         //由于我们的nextImage是没有暴露出来的属性，我们通过KVC暴力获取一下

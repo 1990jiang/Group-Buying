@@ -11,10 +11,6 @@
 //类扩展
 @interface JJMyMessageCell ()
 
-/**iconImage*/
-@property (nonatomic , strong) UIImageView *iconImage;
-/**titleLabel*/
-@property (nonatomic , strong) UILabel *titleLabel;
 /**nextImage*/
 @property (nonatomic , strong) UIImageView *nextImage;
 /**lineLabel*/
@@ -33,10 +29,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifie];
     if (self) {
         
-        [self addSubview:self.iconImage];
-        [self addSubview:self.titleLabel];
-        [self addSubview:self.nextImage];
-        [self addSubview:self.lineLabel];
+        [self.contentView addSubview:self.iconImage];
+        [self.contentView addSubview:self.titleLabel];
+        [self.contentView addSubview:self.nextImage];
+        [self.contentView addSubview:self.lineLabel];
         
         
     }
@@ -112,11 +108,18 @@
         make.bottom.equalTo(weakSelf.mas_bottom);
     }];
     
+}
+
+#pragma mark -- 辅助方法
+//通过set方法给数据字典赋值
+-(void)setSourceDic:(NSDictionary *)sourceDic{
+    _sourceDic = sourceDic;
     
+    self.iconImage.image = [UIImage imageNamed:sourceDic[@"image"]];
+    self.titleLabel.text = sourceDic[@"title"];
     
     
 }
-
 
 
 

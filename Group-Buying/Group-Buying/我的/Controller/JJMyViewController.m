@@ -24,6 +24,9 @@
 /**tableView*/
 @property (nonatomic , strong) UITableView *tableView;
 
+/**存储数组*/
+@property (nonatomic , strong) NSArray *sourceArr;
+
 
 @end
 
@@ -103,6 +106,24 @@
     }
     return _tableView;
 }
+//数据数组
+-(NSArray *)sourceArr
+{
+    if (!_sourceArr){
+        //这个数组里面嵌套有字典
+    _sourceArr = @[
+  
+   @{@"image":@"我的界面我的收藏图标",@"title":@"我的收藏"},
+   @{@"image":@"我的界面意见反馈图标",@"title":@"意见反馈"},
+   @{@"image":@"我的界面关于我们图标",@"title":@"关于我们"},
+   @{@"image":@"我的界面客服热线图标",@"title":@"客服热线"},
+   @{@"image":@"我的界面我的优惠券图标",@"title":@"我的优惠劵"},
+   @{@"image":@"我的界面邀请好友图标",@"title":@"邀请好友,立刻赚钱"}
+  
+   ];
+    }
+    return _sourceArr;
+}
 
 #pragma mark -- tableView代理和数据源
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -121,7 +142,35 @@
     if (cell == nil) {
         cell = [[JJMyMessageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
-    
+    //关键步骤，自己弄假数据就可以这样写
+    cell.sourceDic = self.sourceArr[indexPath.row];
+   
+    //做判断
+    if (indexPath.row == 3) {
+        //由于我们的nextImage是没有暴露出来的属性，我们通过KVC暴力获取一下
+        UIImageView *nextImage = [cell valueForKey:@"nextImage"];
+        //[nextImage removeFromSuperview];
+        //nextImage = nil;
+        //这里不能把这个nextImage移除了，因为我们在cell的layoutSubViews方法中给nextImage在添加约束，但是当其走到indexPath.row == 3时发现nextImage没有了，程序必然崩溃了
+        nextImage.hidden = YES;
+        
+        
+        UILabel *phoneNum = [[UILabel alloc]init];
+        phoneNum.text = @"400-820-8820";
+        phoneNum.textColor = RGB(122, 124, 128);
+        phoneNum.font = [UIFont systemFontOfSize:18];
+        phoneNum.textAlignment = NSTextAlignmentRight;
+        [cell.contentView addSubview:phoneNum];
+        
+        __weak typeof(cell) weakSelf = cell;
+        [phoneNum mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(weakSelf.mas_centerY);
+            make.right.equalTo(weakSelf.mas_right).offset(-15);
+            make.size.mas_equalTo(CGSizeMake(150, 18));
+            
+        }];
+        
+    }
     
     return cell;
     

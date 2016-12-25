@@ -45,17 +45,9 @@
 {
     if (!_sourceArr){
         //这个数组里面嵌套有字典
-        _sourceArr = @[
-                       
-                       @{@"image":@"我的界面我的收藏图标",@"title":@"我的收藏"},
-                       @{@"image":@"我的界面意见反馈图标",@"title":@"意见反馈"},
-                       @{@"image":@"我的界面关于我们图标",@"title":@"关于我们"},
-                       @{@"image":@"我的界面客服热线图标",@"title":@"客服热线"},
-                       @{@"image":@"我的界面我的优惠券图标",@"title":@"我的优惠劵"},
-                       @{@"image":@"我的界面邀请好友图标",@"title":@"邀请好友,立刻赚钱"}
-                       
-                       ];
-    }
+       
+        _sourceArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"JJMyTableViewCell" ofType:@"plist"]];
+        }
     return _sourceArr;
 }
 

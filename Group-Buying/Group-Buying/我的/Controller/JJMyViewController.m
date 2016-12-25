@@ -8,18 +8,13 @@
 
 #import "JJMyViewController.h"
 #import "JJMyTableView.h" //自定义tableView
-
+#import "JJMyHeadView.h" //自定义头部视图
 
 @interface JJMyViewController ()
 
 /**headView*/
-@property (nonatomic , strong) UIView *headView;
-/**loginBackImage*/
-@property (nonatomic , strong) UIImageView *loginBackImage;
-/**loginBtn*/
-@property (nonatomic , strong) UIButton *loginBtn;
-/**registerBtn*/
-@property (nonatomic , strong) UIButton *registerBtn;
+@property (nonatomic , strong) JJMyHeadView *headView;
+
 
 /**tableView*/
 @property (nonatomic , strong) JJMyTableView *tableView;
@@ -41,55 +36,21 @@
    self.edgesForExtendedLayout = UIRectEdgeNone;
     //添加子控件
     [self.view addSubview:self.headView];
-    [self.headView addSubview:self.loginBackImage];
-    [self.headView addSubview:self.loginBtn];
-    [self.headView addSubview:self.registerBtn];
+   
     [self.view addSubview:self.tableView];
+  
     //调用方法
     [self setUpMasonyUI];
 }
 
 #pragma mark -- 懒加载
 //头部视图
--(UIView *)headView
+-(JJMyHeadView *)headView
 {
     if (!_headView){
-        _headView = [[UIView alloc]init];
+        _headView = [[JJMyHeadView alloc]init];
     }
     return _headView;
-}
-//头部视图背景图片
--(UIImageView *)loginBackImage
-{
-    if (!_loginBackImage){
-        _loginBackImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"我的背景"]];
-    
-   }
-    return _loginBackImage;
-}
-//登录按钮
--(UIButton *)loginBtn
-{
-    if (!_loginBtn){
-        _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
-        [_loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        _loginBtn.titleLabel.font = [UIFont systemFontOfSize:18.0f];
-        
-    }
-    return _loginBtn;
-}
-//注册按钮
--(UIButton *)registerBtn
-{
-    if (!_registerBtn){
-        _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_registerBtn setTitle:@"注册" forState:UIControlStateNormal];
-        [_registerBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        _registerBtn.titleLabel.font = [UIFont systemFontOfSize:18.0f];
-        
-    }
-    return _registerBtn;
 }
 //展示tableView
 -(JJMyTableView *)tableView
@@ -120,24 +81,6 @@
         make.left.right.equalTo(weakSelf.view);
         make.top.equalTo(weakSelf.view);
         make.height.mas_equalTo(125);
-    }];
-    //backImage
-    [_loginBackImage mas_makeConstraints:^(MASConstraintMaker *make) {
-       
-        make.edges.equalTo(_headView);
-    }];
-    //loginBtn
-    [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-       //让按钮的X轴中心与父视图相等且向左偏移50
-        make.centerX.equalTo(weakSelf.headView.mas_centerX).offset(-50);
-        make.centerY.equalTo(weakSelf.headView.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(60, 30));
-    }];
-    //registerBtn
-    [_registerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(weakSelf.headView.mas_centerX).offset(50);
-        make.centerY.equalTo(weakSelf.headView.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(60, 30));
     }];
     
     //tableView

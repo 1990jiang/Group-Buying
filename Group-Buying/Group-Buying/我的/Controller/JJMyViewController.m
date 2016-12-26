@@ -9,7 +9,7 @@
 #import "JJMyViewController.h"
 #import "JJMyTableView.h" //自定义tableView
 #import "JJMyHeadView.h" //自定义头部视图
-
+#import "JJMyRegisterController.h" //注册界面
 @interface JJMyViewController ()
 
 /**headView*/
@@ -48,7 +48,18 @@
 -(JJMyHeadView *)headView
 {
     if (!_headView){
+        
+        
         _headView = [[JJMyHeadView alloc]init];
+        
+        __weak typeof(self) weakSelf = self;
+
+        //3.实现block
+        _headView.registerBlock = ^(){
+    
+       JJMyRegisterController *registerVc = [[JJMyRegisterController alloc]init];
+            [weakSelf.navigationController pushViewController:registerVc animated:YES];
+        };
     }
     return _headView;
 }

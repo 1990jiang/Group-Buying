@@ -56,6 +56,7 @@
         _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
         [_loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+       
         _loginBtn.titleLabel.font = [UIFont systemFontOfSize:18.0f];
         
     }
@@ -68,6 +69,7 @@
         _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_registerBtn setTitle:@"注册" forState:UIControlStateNormal];
         [_registerBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+         [_registerBtn addTarget:self action:@selector(pushToRegisterController) forControlEvents:UIControlEventTouchUpInside];
         _registerBtn.titleLabel.font = [UIFont systemFontOfSize:18.0f];
         
     }
@@ -97,12 +99,17 @@
         make.centerY.equalTo(weakSelf.mas_centerY);
         make.size.mas_equalTo(CGSizeMake(60, 30));
     }];
-
+}
+#pragma mark -- 监听方法
+//注册按钮的点击事件
+-(void)pushToRegisterController{
     
-    
+   //2.调用block
+    if (_registerBlock) {
+        _registerBlock();
+    }
     
     
 }
-
 
 @end

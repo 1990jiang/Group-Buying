@@ -18,6 +18,7 @@
 		916388F31E0F6F7C00E34EBE /* JJMyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 916388F21E0F6F7C00E34EBE /* JJMyTableView.m */; };
 		916388F61E0FF27500E34EBE /* JJMyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 916388F51E0FF27500E34EBE /* JJMyHeadView.m */; };
 		916388FA1E0FF8E400E34EBE /* JJMyTableViewCell.plist in Resources */ = {isa = PBXBuildFile; fileRef = 916388F91E0FF8E400E34EBE /* JJMyTableViewCell.plist */; };
+		916388FD1E0FFBB800E34EBE /* JJMyRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916388FC1E0FFBB800E34EBE /* JJMyRegisterController.m */; };
 		91FEC86F1E0CCAEF003B5AC1 /* JJBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */; };
 		91FEC8711E0CCB7D003B5AC1 /* JJTabBarViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */; };
 		91FEC8871E0D0968003B5AC1 /* JJTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FEC8861E0D0968003B5AC1 /* JJTimeViewController.m */; };
@@ -47,6 +48,8 @@
 		916388F41E0FF27500E34EBE /* JJMyHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMyHeadView.h; sourceTree = "<group>"; };
 		916388F51E0FF27500E34EBE /* JJMyHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMyHeadView.m; sourceTree = "<group>"; };
 		916388F91E0FF8E400E34EBE /* JJMyTableViewCell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JJMyTableViewCell.plist; sourceTree = "<group>"; };
+		916388FB1E0FFBB800E34EBE /* JJMyRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMyRegisterController.h; sourceTree = "<group>"; };
+		916388FC1E0FFBB800E34EBE /* JJMyRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMyRegisterController.m; sourceTree = "<group>"; };
 		91FEC86D1E0CCAEF003B5AC1 /* JJBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseNavigationController.h; sourceTree = "<group>"; };
 		91FEC86E1E0CCAEF003B5AC1 /* JJBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseNavigationController.m; sourceTree = "<group>"; };
 		91FEC8701E0CCB7D003B5AC1 /* JJTabBarViewController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JJTabBarViewController.plist; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 			children = (
 				91FEC8881E0D0978003B5AC1 /* JJMyViewController.h */,
 				91FEC8891E0D0978003B5AC1 /* JJMyViewController.m */,
+				916388FB1E0FFBB800E34EBE /* JJMyRegisterController.h */,
+				916388FC1E0FFBB800E34EBE /* JJMyRegisterController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				91FEC88D1E0D098F003B5AC1 /* JJBuyCarViewController.m in Sources */,
 				91FEC8871E0D0968003B5AC1 /* JJTimeViewController.m in Sources */,
 				91FEC8901E0D099D003B5AC1 /* JJClassViewController.m in Sources */,
+				916388FD1E0FFBB800E34EBE /* JJMyRegisterController.m in Sources */,
 				914847911E0E5C070076B09D /* JJMyMessageCell.m in Sources */,
 				91FEC88A1E0D0978003B5AC1 /* JJMyViewController.m in Sources */,
 				91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */,

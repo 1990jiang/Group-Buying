@@ -35,6 +35,8 @@
 {
     if (!_nextLandingView){
         _nextLandingView = [[JJAuthCodeView alloc]init];
+        //给其属性赋值
+        _nextLandingView.phoneNumString = self.userMessageDic[@"userName"];
     }
     return _nextLandingView;
 }

@@ -10,4 +10,8 @@
 
 @interface JJAuthCodeView : UIView
 
+/**记录从注册界面传过来的电话号码*/
+@property (nonatomic , copy) NSString *phoneNumString;
+
+
 @end

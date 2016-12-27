@@ -40,7 +40,7 @@
     if (!_tostLabel) {
         _tostLabel = [[UILabel alloc]init];
         _tostLabel.text = @"验证码已经发送到+ 86";
-        _tostLabel.font = [UIFont systemFontOfSize:12.0];
+        _tostLabel.font = [UIFont systemFontOfSize:15.0];
     }
     return _tostLabel;
 }
@@ -69,8 +69,9 @@
 - (UIButton *)timeButton{
     if (!_timeButton) {
         _timeButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-       // [_timeButton addTarget:self action:@selector(GCDTime) forControlEvents:(UIControlEventTouchUpInside)];
-        [_timeButton setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
+       [_timeButton addTarget:self action:@selector(countDownMethod) forControlEvents:(UIControlEventTouchUpInside)];
+        [_timeButton setTitleColor:RGB(56, 166, 243) forState:(UIControlStateNormal)];
+         [_timeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
     }
     return _timeButton;
 }
@@ -139,7 +140,72 @@
         make.top.equalTo(weakSelf.codeText.mas_bottom).offset(15);
     }];
 }
+#pragma mark -- setter方法
+- (void)setPhoneNumString:(NSString *)phoneNumString{
+    
+    _phoneNumString = phoneNumString;
+    _tostLabel.attributedText = [self makeTostLabelAttributed];
+    
+}
 
+#pragma mark -- 辅助方法
+//制作tostLabel的属性文本
+- (NSMutableAttributedString *)makeTostLabelAttributed{
+    NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc]initWithString:@"验证码已经发送到 " attributes:@{NSForegroundColorAttributeName:RGB(139, 139, 139)}];
+    NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"+86 %@",_phoneNumString] attributes:@{NSForegroundColorAttributeName:RGB(56, 166, 243), NSFontAttributeName : [UIFont systemFontOfSize:16]}];
+    //拼接一下
+    [string1 insertAttributedString:string2 atIndex:string1.length];
+    return string1;
+}
+//制作timeButton的属性文本
+- (NSMutableAttributedString *)makeTimeButtonAttributed:(NSInteger)time{
+    NSMutableAttributedString *string3 = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%li",time] attributes:@{NSForegroundColorAttributeName:RGB(56, 166, 243)}];
+    NSMutableAttributedString *string4 = [[NSMutableAttributedString alloc]initWithString:@"秒后重试" attributes:@{NSForegroundColorAttributeName:RGB(139, 139, 139)}];
+    
+    [string3 insertAttributedString:string4 atIndex:string3.length];
+    return string3;
+}
+
+//获取验证码按钮倒计时方法
+//也可以把这个方法直接放在viewDidLoad中，这样直接进入页面就开始调用了
+-(void)countDownMethod{
+    //GCD的倒计时方法(直接敲dispatch_source_t回车就好)
+   
+      __block NSInteger time = 5;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    /*
+     参数:
+     <#dispatchQueue#>:
+     <#intervalInSeconds#>:时间间隔
+     <#leewayInSeconds#>:执行时间(输入0,就是让其立即执行)
+     <#code to be executed when timer fires#>:执行内容
+     */
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(timer, ^{
+        if (time < 1) {
+           //结束定时器
+            dispatch_source_cancel(timer);
+          //重新设置timeBtn标题
+            NSMutableAttributedString *string = [[NSMutableAttributedString alloc]initWithString:@"重新发送" attributes:@{NSForegroundColorAttributeName:RGB(56, 166, 243)}];
+            //在主线程中更新UI
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _timeButton.userInteractionEnabled = YES;
+                [_timeButton setAttributedTitle:string forState:(UIControlStateNormal)];
+            });
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _timeButton.userInteractionEnabled = NO;
+                [_timeButton setAttributedTitle:[self makeTimeButtonAttributed:time] forState:(UIControlStateNormal)];
+            });
+            time --;
+        }
+    });
+    dispatch_resume(timer);
+    
+    
+    
+}
 
 #pragma mark -- 监听方法
 - (void)codeTextChangeText:(UITextField *)textField{

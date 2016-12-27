@@ -171,9 +171,11 @@
     if (textField.text.length == 11 && _passwordText.text.length > 5) {
         self.nextBtn.backgroundColor = RGB(56, 165, 241);
         self.nextBtn.userInteractionEnabled = YES;
+        self.nextBtn.selected = YES;
     }else{
          self.nextBtn.backgroundColor = RGB(229, 229, 229);
           self.nextBtn.userInteractionEnabled = NO;
+        self.nextBtn.selected = NO;
     }
 }
 
@@ -182,23 +184,22 @@
     if (textField.text.length > 5 && _userNameText.text.length == 11) {
         self.nextBtn.backgroundColor = RGB(56, 165, 241);
         self.nextBtn.userInteractionEnabled = YES;
-
+        self.nextBtn.selected = YES;
     }else{
         
         self.nextBtn.backgroundColor = RGB(229, 229, 229);
         self.nextBtn.userInteractionEnabled = NO;
-
+        self.nextBtn.selected = NO;
     }
 }
 
 //下一步按钮监听事件
 -(void)pushNextViewController{
     
-    
-    NSLog(@"可以点G级嘛");
-    
-    
-    
+   //调用block
+    if (self.nextBlock) {
+        self.nextBlock(@{@"userName":_userNameText.text, @"password":_passwordText.text});
+    }
 }
 
 

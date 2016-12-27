@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+//定义block,将手机号和密码传到下一个界面中
+typedef void(^nextViewControllerBlock)(NSDictionary *dic);
+
 @interface JJLandingPutView : UIView
+
+/**block*/
+@property (nonatomic , copy) nextViewControllerBlock nextBlock;
+
+
 
 @end

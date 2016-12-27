@@ -14,6 +14,8 @@
 		91016F9B1E0B73CE00C7E0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9A1E0B73CE00C7E0D8 /* Assets.xcassets */; };
 		91016F9E1E0B73CE00C7E0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9C1E0B73CE00C7E0D8 /* LaunchScreen.storyboard */; };
 		91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */; };
+		913905191E12057D00F994FF /* JJAuthCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913905181E12057D00F994FF /* JJAuthCodeController.m */; };
+		9139051C1E12106E00F994FF /* JJAuthCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9139051B1E12106E00F994FF /* JJAuthCodeView.m */; };
 		913920531E1100DD0027B0DA /* JJLandingPutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 913920521E1100DD0027B0DA /* JJLandingPutView.m */; };
 		913920561E1102060027B0DA /* JJThirdLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 913920551E1102060027B0DA /* JJThirdLoginView.m */; };
 		914847911E0E5C070076B09D /* JJMyMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914847901E0E5C070076B09D /* JJMyMessageCell.m */; };
@@ -41,6 +43,10 @@
 		91016F9F1E0B73CE00C7E0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91016FA81E0BCE5600C7E0D8 /* JJBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseTabBarController.h; sourceTree = "<group>"; };
 		91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTabBarController.m; sourceTree = "<group>"; };
+		913905171E12057D00F994FF /* JJAuthCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAuthCodeController.h; sourceTree = "<group>"; };
+		913905181E12057D00F994FF /* JJAuthCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAuthCodeController.m; sourceTree = "<group>"; };
+		9139051A1E12106E00F994FF /* JJAuthCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAuthCodeView.h; sourceTree = "<group>"; };
+		9139051B1E12106E00F994FF /* JJAuthCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAuthCodeView.m; sourceTree = "<group>"; };
 		913920511E1100DD0027B0DA /* JJLandingPutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLandingPutView.h; sourceTree = "<group>"; };
 		913920521E1100DD0027B0DA /* JJLandingPutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLandingPutView.m; sourceTree = "<group>"; };
 		913920541E1102060027B0DA /* JJThirdLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJThirdLoginView.h; sourceTree = "<group>"; };
@@ -173,6 +179,17 @@
 			path = "基础控制器";
 			sourceTree = "<group>";
 		};
+		913905161E12056500F994FF /* 验证码界面 */ = {
+			isa = PBXGroup;
+			children = (
+				913905171E12057D00F994FF /* JJAuthCodeController.h */,
+				913905181E12057D00F994FF /* JJAuthCodeController.m */,
+				9139051A1E12106E00F994FF /* JJAuthCodeView.h */,
+				9139051B1E12106E00F994FF /* JJAuthCodeView.m */,
+			);
+			path = "验证码界面";
+			sourceTree = "<group>";
+		};
 		9139204F1E11007A0027B0DA /* 注册 */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +281,7 @@
 		91FEC87A1E0CCF1B003B5AC1 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				913905161E12056500F994FF /* 验证码界面 */,
 				91FEC8931E0D0AB4003B5AC1 /* Tool */,
 				91FEC87B1E0CCF1B003B5AC1 /* Controller */,
 				91FEC87C1E0CCF1B003B5AC1 /* Model */,
@@ -498,7 +516,9 @@
 				91FEC88D1E0D098F003B5AC1 /* JJBuyCarViewController.m in Sources */,
 				91FEC8871E0D0968003B5AC1 /* JJTimeViewController.m in Sources */,
 				91FEC8901E0D099D003B5AC1 /* JJClassViewController.m in Sources */,
+				9139051C1E12106E00F994FF /* JJAuthCodeView.m in Sources */,
 				916388FD1E0FFBB800E34EBE /* JJMyRegisterController.m in Sources */,
+				913905191E12057D00F994FF /* JJAuthCodeController.m in Sources */,
 				913920561E1102060027B0DA /* JJThirdLoginView.m in Sources */,
 				914847911E0E5C070076B09D /* JJMyMessageCell.m in Sources */,
 				91FEC88A1E0D0978003B5AC1 /* JJMyViewController.m in Sources */,

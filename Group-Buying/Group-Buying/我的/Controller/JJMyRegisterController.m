@@ -9,6 +9,7 @@
 #import "JJMyRegisterController.h"
 #import "JJLandingPutView.h" //注册界面输入View
 #import "JJThirdLoginView.h" //第三方登录View
+#import "JJAuthCodeController.h" //验证码控制器
 
 @interface JJMyRegisterController ()
 
@@ -46,6 +47,14 @@
 {
     if (!_landingPutView){
         _landingPutView = [[JJLandingPutView alloc]init];
+        
+        __weak typeof(self) weakSelf = self;
+        _landingPutView.nextBlock = ^(NSDictionary *dic){
+            JJAuthCodeController *vc = [[JJAuthCodeController alloc]init];
+            vc.userMessageDic = dic;
+            [weakSelf.navigationController pushViewController:vc animated:YES];
+            };
+        
     }
     return _landingPutView;
 }

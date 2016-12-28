@@ -32,6 +32,7 @@
         [self addSubview:self.timeButton];
         [self addSubview:self.lineLabel];
         [self addSubview:self.landingButton];
+        
     }
     return self;
 }
@@ -71,7 +72,7 @@
         _timeButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
        [_timeButton addTarget:self action:@selector(countDownMethod) forControlEvents:(UIControlEventTouchUpInside)];
         [_timeButton setTitleColor:RGB(56, 166, 243) forState:(UIControlStateNormal)];
-         [_timeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+        // [_timeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
     }
     return _timeButton;
 }
@@ -171,7 +172,8 @@
 -(void)countDownMethod{
     //GCD的倒计时方法(直接敲dispatch_source_t回车就好)
    
-      __block NSInteger time = 5;
+    //倒计时时间
+    __block NSInteger time = 30;
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     /*
      参数:
@@ -188,7 +190,7 @@
             dispatch_source_cancel(timer);
           //重新设置timeBtn标题
             NSMutableAttributedString *string = [[NSMutableAttributedString alloc]initWithString:@"重新发送" attributes:@{NSForegroundColorAttributeName:RGB(56, 166, 243)}];
-            //在主线程中更新UI
+            //在GCD中要想修改UI的样式必须获取主线程中修改
             dispatch_async(dispatch_get_main_queue(), ^{
                 _timeButton.userInteractionEnabled = YES;
                 [_timeButton setAttributedTitle:string forState:(UIControlStateNormal)];

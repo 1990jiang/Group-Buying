@@ -13,5 +13,7 @@
 /**记录从注册界面传过来的电话号码*/
 @property (nonatomic , copy) NSString *phoneNumString;
 
+//GCD倒计时方法
+-(void)countDownMethod;
 
 @end

@@ -94,7 +94,7 @@
         [_landingButton setTitleColor:RGB(132, 132, 132) forState:(UIControlStateNormal)];
         [_landingButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateSelected)];
         _landingButton.selected = NO;
-       // [_landingButton addTarget:self action:@selector(landingMethod) forControlEvents:(UIControlEventTouchUpInside)];
+      [_landingButton addTarget:self action:@selector(landingMethod) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _landingButton;
 }
@@ -220,6 +220,18 @@
         self.landingButton.backgroundColor = RGB(229, 229, 229);
         self.landingButton.selected = NO;
     }
+}
+
+//注册按钮监听方法
+-(void)landingMethod{
+    
+    if (_landingblock) {
+       
+        _landingblock(_codeText.text);
+    }
+    
+    
+    
 }
 
 #pragma mark -- UITextField代理方法

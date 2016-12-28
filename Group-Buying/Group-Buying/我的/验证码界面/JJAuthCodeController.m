@@ -29,7 +29,7 @@
     //调用方法
     [self setUpMasonry];
     
-    [self requestCodeNumber];
+   
 }
 
 #pragma mark -- 初始化
@@ -39,6 +39,15 @@
         _nextLandingView = [[JJAuthCodeView alloc]init];
         //给其属性赋值
         _nextLandingView.phoneNumString = self.userMessageDic[@"userName"];
+        //实现注册按钮block
+        __weak typeof(self) weakSelf = self;
+        _nextLandingView.landingblock = ^(NSString *code){
+          //注册请求的方法是在这个注册按钮的block中调用的
+          
+            [weakSelf landingMethod:code];
+            
+            
+        };
     }
     return _nextLandingView;
 }
@@ -52,7 +61,7 @@
     }];
 }
 
-//验证码网络请求
+//验证码网络请求:这个请求是结合手机号向服务器请求一个验证码下来的，所以这个方法可以由验证码按钮点击时调用，也可以进去验证码界面就调用
 //只要能够进入验证码界面，就说明用户是输入了一个11位的手机号，至于这个手机号正不正确就交由后台服务器去判断了
 -(void)requestCodeNumber{
     
@@ -74,12 +83,49 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"失败是---%@",error);
     }];
+}
+
+//注册网络请求
+-(void)landingMethod:(NSString *)code{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //设置请求的编码格式
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    /*
+     
+     将注册需要传入的参数拼接为一个字典
+     手机号:LoginName
+     密码:Lpassword
+     验证码:Code
+     手机号:Telephone
+     
+     
+     */
+    
+    [manager GET:@"http://" parameters:@{@"LoginName":_userMessageDic[@"userName"],
+                     @"Lpassword":_userMessageDic[@"password"],
+                     @"Code":code,
+                     @"Telephone":_userMessageDic[@"userName"]}
+        progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if ([responseObject[@"result"] isEqualToString:@"success"]) {
+                NSLog(@"注册成功");
+                
+            }else if ([responseObject[@"result"] isEqualToString:@"codeError"] ){
+                
+                NSLog(@"验证码错误");
+                
+            }else{
+                NSLog(@"注册失败");
+            }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+    
     
     
     
 }
-
-
 
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 蒋俊. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "JJBaseViewController.h"
 
-@interface JJAuthCodeController : UIViewController
+@interface JJAuthCodeController : JJBaseViewController
 
 /**手机号和密码*/
 @property (nonatomic , strong) NSDictionary *userMessageDic;

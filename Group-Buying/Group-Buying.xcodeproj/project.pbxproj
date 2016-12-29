@@ -15,6 +15,7 @@
 		91016F9E1E0B73CE00C7E0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91016F9C1E0B73CE00C7E0D8 /* LaunchScreen.storyboard */; };
 		91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */; };
 		911A30481E14A99B00976CFC /* JJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 911A30471E14A99B00976CFC /* JJHttpTool.m */; };
+		911A304B1E14F19D00976CFC /* JJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911A304A1E14F19D00976CFC /* JJBaseViewController.m */; };
 		913905191E12057D00F994FF /* JJAuthCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913905181E12057D00F994FF /* JJAuthCodeController.m */; };
 		9139051C1E12106E00F994FF /* JJAuthCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9139051B1E12106E00F994FF /* JJAuthCodeView.m */; };
 		913920531E1100DD0027B0DA /* JJLandingPutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 913920521E1100DD0027B0DA /* JJLandingPutView.m */; };
@@ -46,6 +47,8 @@
 		91016FA91E0BCE5600C7E0D8 /* JJBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseTabBarController.m; sourceTree = "<group>"; };
 		911A30461E14A99B00976CFC /* JJHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJHttpTool.h; sourceTree = "<group>"; };
 		911A30471E14A99B00976CFC /* JJHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJHttpTool.m; sourceTree = "<group>"; };
+		911A30491E14F19D00976CFC /* JJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBaseViewController.h; sourceTree = "<group>"; };
+		911A304A1E14F19D00976CFC /* JJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBaseViewController.m; sourceTree = "<group>"; };
 		913905171E12057D00F994FF /* JJAuthCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAuthCodeController.h; sourceTree = "<group>"; };
 		913905181E12057D00F994FF /* JJAuthCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAuthCodeController.m; sourceTree = "<group>"; };
 		9139051A1E12106E00F994FF /* JJAuthCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAuthCodeView.h; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 			children = (
 				911A30461E14A99B00976CFC /* JJHttpTool.h */,
 				911A30471E14A99B00976CFC /* JJHttpTool.m */,
+				911A30491E14F19D00976CFC /* JJBaseViewController.h */,
+				911A304A1E14F19D00976CFC /* JJBaseViewController.m */,
 			);
 			path = "工具类";
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				911A30481E14A99B00976CFC /* JJHttpTool.m in Sources */,
 				913920561E1102060027B0DA /* JJThirdLoginView.m in Sources */,
 				914847911E0E5C070076B09D /* JJMyMessageCell.m in Sources */,
+				911A304B1E14F19D00976CFC /* JJBaseViewController.m in Sources */,
 				91FEC88A1E0D0978003B5AC1 /* JJMyViewController.m in Sources */,
 				91016FAA1E0BCE5600C7E0D8 /* JJBaseTabBarController.m in Sources */,
 				91FEC86F1E0CCAEF003B5AC1 /* JJBaseNavigationController.m in Sources */,

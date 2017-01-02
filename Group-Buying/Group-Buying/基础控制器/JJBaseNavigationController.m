@@ -44,5 +44,55 @@
 
 }
 
+#pragma mark -- 重写方法在跳转的时候隐藏tabBar
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
+   // NSLog(@"加载前 %li",self.childViewControllers.count);
+    
+    //判断一下，如果是有子控制器，证明已经push过了，所以要统一修改放回按钮
+    if (self.childViewControllers.count) {
+       
+        //设置统一的返回按钮
+        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [backBtn setImage:[UIImage imageNamed:@"详情界面返回按钮"] forState:UIControlStateNormal];
+        backBtn.frame = CGRectMake(0, 0, 30, 30);
+        [backBtn addTarget:self action:@selector(backToViewController) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+        viewController.navigationItem.leftBarButtonItem = item;
+        
+        //隐藏tabBar
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
+    
+}
+
+-(void)backToViewController{
+    
+    [self popViewControllerAnimated:YES];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
